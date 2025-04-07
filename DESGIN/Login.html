@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p class="error-message" id="errorMessage"></p>
+
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            let username = document.getElementById('username').value.trim();
+            let password = document.getElementById('password').value.trim();
+            let errorMessage = document.getElementById('errorMessage');
+
+            if (username === '' || password === '') {
+                errorMessage.textContent = 'Both fields are required!';
+                return;
+            }
+
+            try {
+                let response = await fetch('http://localhost:5000/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                let data = await response.json();
+
+                if (response.ok) {
+                    alert('Login successful!');
+                    localStorage.setItem('token', data.token); // Store JWT
+                    errorMessage.textContent = '';
+                } else {
+                    errorMessage.textContent = data.message;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.textContent = 'Server error. Try again later.';
+            }
+        });
+
+    </script>
+
+    <!-- <p>https://chatgpt.com/share/67f3a078-9674-8005-97a7-4f7b74843ed8</p> -->
+</body>
+
+</html>

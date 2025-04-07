@@ -1,0 +1,321 @@
+body {
+    font-family: "Audiowide", sans-serif;
+    font-style: italic;
+}
+
+.navBar {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #dc55f7;
+    z-index: 1000;
+    
+    
+}
+
+.navBar a{
+    color: rgb(245, 239, 239);
+    text-decoration: none;
+}
+
+
+@media  (max-width: 900px) {
+    .navBar {
+      float: none;
+      display: block;
+    }
+  }
+
+.logo{
+    background-color: rgb(255, 76, 76);
+    height: 80px;
+    width: 80px;
+    background-image: url('/1600w-WIPEOAyYPIs.webp');
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.text {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right:100px ;
+    gap: 30px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+@media  (max-width: 900px) {
+    .text {
+      float: none;
+      display: block;
+    }
+  }
+
+
+.imageBox {
+    margin-top: 110px;
+    background-image: url('/hero-bg-01.jpg');
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 20px;
+    border-radius: 0 0 150px 0px;
+    opacity: 0.9 ;
+
+}
+
+.imageText {
+    margin-left: 50px;
+    margin-top: 60px;
+    padding: 100px;
+    padding-right: 600px;
+    position: absolute;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+
+}
+
+
+#button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.textNumber {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataSolution {
+    display: flex;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.numberBox {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+
+}
+
+.mil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgb(241, 240, 240);
+
+}
+
+.textNumber2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(247, 247, 247);
+    padding: 60px;
+
+}
+
+.reachNew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    padding: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+
+}
+
+.emailDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+
+
+}
+
+.email {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    width: 300px;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 20px rgb(230, 228, 228);
+}
+
+.FortuneReuter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+    font-size: 25px;
+}
+
+.healthCare {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    padding-left: 180px;
+    margin-right: 180px;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: (repeat(2, 1fr));
+
+}
+
+.box{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: rgb(245, 244, 244);
+    height: 380px;
+    width: 400px;
+    padding: 60px;
+    border-radius: 15px;
+    
+
+}
+
+.box:hover{
+    box-shadow: 15px 15px 20px rgb(206, 204, 204);
+    transition: box-shadow 0.8s ease-in-out 0.1s; 
+}
+.colorBox {
+    color: white;
+    background-color: #060097;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    height: full;
+    width: full;
+
+}
+
+.color {
+    height: 600px;
+    width: 500px;
+    padding-top: px;
+    background-image: url('/furniture.jpg');
+    background-position: cover;
+
+}
+
+.textBox {
+
+    height: 300px;
+    width: 500px;
+    padding: 20px;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.outer {
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(230, 229, 226);
+    border-radius: 60px;
+    justify-content: space-evenly;
+    gap: 50px;
+    flex-wrap: wrap;
+
+}
+
+#dataDisplay,
+.div2 {
+    color: black;
+    text-align: left;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(187, 186, 253);
+    height: 200px;
+    width: 200px;
+    padding: 50px;
+    gap: 50px;
+
+}
+
+#dataDisplay,
+.div2:hover,
+.div3:hover {
+    box-shadow: 5px 5px 10px rgb(148, 65, 243);
+    transition-duration: 1s;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .outer {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.div3 {
+    color: black;
+    text-align: left;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(187, 186, 253);
+    height: 200px;
+    width: 200px;
+    padding: 50px;
+    gap: 50px;
+    background: rgb(163, 163, 250);
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
